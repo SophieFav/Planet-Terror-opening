@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    background-image: url("../img/damagefilm.gif");
+    background-image:cover;
+    background-repeat:no-repeat;
+}
+
+.intro h4{
+    font-size:40px;
+    text-align:center;
+    line-height:40px;
+}
+
+.intro {
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    animation: intro 6s ease-out 1s;
+    color: #e22626;
+    font-size: 300%;
+    opacity: 0;
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.logo {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 1;
+    margin: auto;
+    animation: logo 10s ease-out 10s;
+    opacity: 0;
+}
+
+.logo img{
+    width: inherit;
+
+}
+
+@keyframes logo {
+    0% {
+        width: 20em;        
+        transform: scale(2.75);
+        opacity: 1;
+    }
+    50% {
+        width: 18em; 
+        opacity: 1;     
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.1);
+        width: 18em;        
+    }
+}
+
+
+.text p{
+    font-size:14px;
+    word-spacing:-2px;
+    line-height:20px;
+}
+
+.text h2{
+    font-size:20px;
+    text-align:center;
+}
+
+.text img{
+    width:200px;
+}
+
+
+.text {
+    color:#e22626;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:190px;
+    text-align:justify;
+    z-index: 1;
+    transform: perspective(700px);
+    animation: text 60s linear 10s 1 normal;
+    transform-origin:center bottom;
+    opacity: 0;
+}
+
+
+
+@keyframes text {
+    0% {
+        transform: 
+            translate(-50%, -50%) 
+            perspective(500px) 
+            rotateX(25deg) 
+            scale3d(3, 3, 3) 
+            translate3d(0px, 720px, 0px);
+    }
+    50% {
+        opacity: 1;     
+    }
+    100% {
+        opacity: 0;
+        transform:  
+            translate(-50%, -50%)
+            perspective(300px)
+            rotateX(25deg)
+            scale3d(3, 3, 3)
+            translate3d(0px, -500px, 0px);     
+    }
+}
+
+
+
+/*      transition: all 1s ease;
+        translateY
+        transform: translateX(200px); bouge vers la droite
+        transform: scale(2);*/ 
